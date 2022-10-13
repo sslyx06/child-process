@@ -1,0 +1,54 @@
+ <body>
+    <link rel="stylesheet" href="css/estilos.css">
+    <h1>Test de funcionamiento</h1>
+    <h1>EL TEST DE /api/products SE HACE DESDE ESTE FORMULARIO</h1>
+    <h2>Agregar Producto</h2>
+    <form id="productosForm">
+        <label><br>Name<br></label>
+        <input name="name"required>
+        <label><br>Description<br></label>
+        <input name="description"required>
+        <label><br>Price<br></label>
+        <input type = "number" name="price"required>
+        <label><br>Stock<br></label>
+        <input type = "number" name="stock"required>
+        <label><br>Thumbnail<br></label>
+        <input name="thumbnail" required><br>
+        <input type="submit">
+    </form>
+    <h2>Funciones</h2>
+    <form action="http://localhost:8080/api/products/pid" method="get">
+        <label><br>Buscar producto con id :</label>
+        <input type = "number" name="pid"required>
+        <br><button>Buscar id</button>
+    </form>
+
+    <form id="deleteForm">
+        <label><br>Borrar por id:</label>
+        <input type = "number" name="delete"required><br>
+        <input type="submit">
+    </form>
+    <h2>Actualizar producto</h2>
+    <form id="actualizarForm">
+        <label><br>Id del producto que quieres actualizar<br></label>
+        <input type = "number" name="id"required>
+        <label><br>Name<br></label>
+        <input name="name"required>
+        <label><br>Description<br></label>
+        <input name="description"required>
+        <label><br>Price<br></label>
+        <input  type = "number" name="price"required>
+        <label><br>Stock<br></label>
+        <input  type = "number" name="stock"required>
+        <label><br>Thumbnail<br></label>
+        <input name="thumbnail" required><br>
+        <input type="submit">
+    </form>
+    <h1>EL TEST DE /api/carts SE HACE DESDE POSTMAN. </br> Intrucciones a Hacer:</h1>
+    <h2>POST: / - Crea un carrito y devuelve su id. </br> DELETE: /:cid - Vacía un carrito y lo elimina. (SI ELIMINA EL CARRITO) </br>
+    GET: '/:cid/products' - Me permite listar todos los productos guardados en el carrito </br>
+    POST: /:cid/products/:pid = Lo hice asi por que en la guia no espesificaba como se tenia que hacer para saber en que carrito guardar </br>
+    DELETE: '/:cid/products/:pid' - Eliminar un producto del carrito por su id de carrito y deproducto</h2>
+    <script src="js/index.js"></script>
+
+    </body>
